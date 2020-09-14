@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    flex-flow: row wrap;
+    header{
+        width: 100vw;
+        height: 200px;
+        background-color: #e9e9e9;
+        border: 1px solid black;
+    }
+    nav{
+        ul{
+            list-style: none;
+            display: flex;
+            flex-flow: column wrap;
+            align-content: flex-start;
+        }
+    }
+}
