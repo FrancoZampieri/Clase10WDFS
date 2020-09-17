@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 * {
   margin: 0%;
-  padding: 0%; }
+  padding: 0%;
+  font-family: 'Roboto', sans-serif; }
 
 body {
   display: flex;
@@ -11,47 +13,57 @@ body {
     display: none; }
   body header {
     width: 100vw;
-    height: 200px;
+    height: auto;
     background-color: #e9e9e9;
-    border: 1px solid black; }
+    border: 1px solid black;
+    display: flex;
+    justify-content: center; }
+    body header img {
+      width: 100%;
+      height: auto; }
   body .container {
     width: 100vw;
     display: flex;
     flex-flow: row nowrap;
     overflow: hidden; }
-  body nav {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center; }
-    body nav ul {
-      list-style: none;
+  body .imgcontainer {
+    flex-grow: 20%; }
+    body .imgcontainer nav {
       display: flex;
-      flex-flow: column wrap;
-      width: 100%; }
-      body nav ul li {
-        text-align: center;
-        padding: 1em;
-        border-bottom: 1px solid grey; }
+      justify-content: center; }
+      body .imgcontainer nav ul {
+        list-style: none;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%; }
+        body .imgcontainer nav ul :hover {
+          background-color: #e6e6e6; }
+        body .imgcontainer nav ul li {
+          text-align: center;
+          padding: 1em;
+          border-bottom: 1px solid grey; }
   body section {
     border: 1px solid black;
     padding: 1em;
     display: flex;
     flex-flow: column;
-    align-items: center; }
+    align-items: center;
+    flex-grow: 60%; }
     body section article {
       width: 80%;
+      height: auto;
       padding: 1em;
-      border: 2px dashed green;
       text-align: justify; }
       body section article img {
         width: 100%;
-        height: 50%;
+        height: auto;
         margin-bottom: 1%; }
       body section article p {
         height: 4ch;
         font-size: 1.5em;
         overflow: hidden;
-        text-overflow: ellipsis; }
+        text-overflow: ellipsis;
+        padding-bottom: 5px; }
       body section article a {
         font-size: 2em; }
     body section .noticia p {
@@ -65,9 +77,9 @@ body {
     border: 1px solid black;
     display: flex;
     flex-flow: column wrap;
-    flex: 25%;
     max-width: 25%;
-    padding: 0 4px; }
+    padding: 0 4px;
+    background-color: #e9e9e9; }
     body aside :first-child {
       margin-top: 0.5em; }
     body aside img {
@@ -79,25 +91,37 @@ body {
       height: auto;
       overflow: hidden;
       border-radius: 20px 20px 0 0;
-      border-bottom: 5px gray solid;
-      margin-top: 1em; }
+      margin-top: 2em; }
     body aside p {
       z-index: 10;
       height: 20%;
       width: 100%;
-      background-color: honeydew; }
+      background-color: white;
+      font-size: 1em; }
   body footer {
-    height: 10em; }
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #b83939; }
     body footer form {
-      border: 1px solid grey;
+      background-color: #e9e9e9;
       border-radius: 20px;
       margin: 20px;
       padding: 1em;
       width: 50vw;
-      height: 100%; }
-    body footer img {
-      width: 50vw;
-      height: 100%; }
+      height: 200px; }
+    body footer .social {
+      height: 100%;
+      width: 30%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end; }
+      body footer .social img {
+        margin: 1em;
+        max-width: 50px; }
   @media screen and (max-width: 900px) and (min-width: 426px) {
     body .container {
       display: flex;
@@ -108,7 +132,7 @@ body {
         max-width: unset;
         background-color: #e9e9e9; }
         body .container aside :first-child {
-          margin-top: 1em; }
+          margin-top: 2em; }
         body .container aside div {
           border-right: 1px solid grey;
           border-left: 1px solid grey;
@@ -118,7 +142,11 @@ body {
           body .container aside div img {
             height: 90%; }
           body .container aside div p {
-            width: 30ch; } }
+            width: 30ch; }
+    body footer form {
+      width: 80vw; }
+    body footer .social {
+      flex-flow: wrap; } }
   @media screen and (max-width: 425px) {
     body .container {
       flex-flow: column; }
@@ -161,6 +189,10 @@ body {
         border: 0 solid black;
         width: 40%;
         margin: auto;
-        margin-top: 2%; } }
+        margin-top: 2%; }
+    body footer form {
+      width: 80vw; }
+    body footer .social {
+      flex-flow: wrap; } }
 
 /*# sourceMappingURL=style.css.map */
