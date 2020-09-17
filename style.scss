@@ -7,17 +7,9 @@ body{
     flex-flow: row wrap;
     .hambur{
         display: none;
-    }
-    
+    }    
     #checkmenu{
         display: none;
-    }
-    .container{
-        width: 100vw;
-        display: flex;
-        flex-flow: row nowrap;
-        overflow: hidden;
-        height: auto;
     }
     header{
         width: 100vw;
@@ -25,10 +17,13 @@ body{
         background-color: #e9e9e9;
         border: 1px solid black;
     }
+    .container{
+        width: 100vw;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;
+    }
     nav{
-
-        // flex-grow: unset;
-        height: auto;
         border: 1px solid black;
         display: flex;  
         justify-content: center;
@@ -38,26 +33,36 @@ body{
             flex-flow: column wrap;
             width: 100%;
             li{
-                text-align:center ;
+                text-align: center ;
                 padding: 1em;
                 border-bottom: 1px solid grey;
-            }        
-            
+            }          
         }
     }
     section{
-        // flex-grow: 5;
-        height: auto;
         border: 1px solid black;
         padding: 1em;
-        article
-        {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        article{
+            width: 80%;
             padding: 1em;
+            border: 2px dashed green;
+            text-align: justify;
+            img{
+                width: 100%;
+                height: 50%;
+                margin-bottom: 1%;
+            }
             p{
-                height: 3ch;
+                height: 4ch;
+                font-size: 1.5em;
                 overflow: hidden;
-                // white-space: nowrap;
                 text-overflow: ellipsis;
+            }
+            a{
+                font-size: 2em;
             }
         }
         .noticia{
@@ -70,8 +75,6 @@ body{
         }
     }
     aside{
-        // flex-grow: unset;
-        height: auto;
         border: 1px solid black;
         display: flex;
         flex-flow: column wrap;
@@ -79,12 +82,12 @@ body{
         max-width: 25%;
         padding: 0 4px;
         :first-child{
-            margin-top: 0;
+            margin-top: 0.5em;
         }
         img{
             width: 100%;
             height: auto;
-            vertical-align: middle;
+            vertical-align: center;
         }
         div{
             width: 100%;
@@ -96,14 +99,13 @@ body{
         }
         p{
             z-index: 10;
-            // position: absolute;
             height: 20%;
             width: 100%;
             background-color: honeydew;
         }
     }
     footer{
-        height: 200px;
+        height: 10em;
         form{
             border: 1px solid grey;
             border-radius: 20px;
@@ -116,7 +118,6 @@ body{
             width: 50vw;
             height: 100%;  
         }
-
     } 
 
 
@@ -155,10 +156,10 @@ body{
     }
 }
 
-}
-@media screen and (max-width: 425px) {
-        
+
+@media screen and (max-width: 425px) {     
     .container {
+        flex-flow: column;
             .imgcontainer{
                 width: 100%;
                 height: auto;
@@ -167,12 +168,14 @@ body{
                 align-items: flex-end;
                 
                 .hambur{
+                    display: block;
                     position: absolute;
                     width: 50px;
                     height: 50px;
                     z-index: -1;
                 }
                 #checkmenu{
+                    display: block;
                     width: 50px;
                     height: 50px;  
                     opacity: 0;
@@ -190,24 +193,24 @@ body{
                             padding: 1em;
                             border-bottom: 1px solid grey;
                         }
-                        
                     }
-                    
-                }             
-            }
-      
-    
-                
-                #checkmenu:checked ~ #nave{         
-                    // animation-name: menu_Anim;
-                    // animation-duration: 0.5s;
+                }  
+                #checkmenu:checked ~ #nave{    
                     display: flex;
                     align-self: flex-end;
-    
-                    
-                    
-                }
-    
+                }           
+            } 
+            #destacadas{
+                max-width: 100vw;
+                display: flex;
+                flex-flow: row wrap;
+            }
+            #destacadas div{
+                border: 0 solid black;
+                width: 40%;
+                margin: auto;
+                margin-top: 2%;
+            }
         }
+    }
 }
-    

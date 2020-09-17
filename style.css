@@ -9,19 +9,17 @@ body {
     display: none; }
   body #checkmenu {
     display: none; }
-  body .container {
-    width: 100vw;
-    display: flex;
-    flex-flow: row nowrap;
-    overflow: hidden;
-    height: auto; }
   body header {
     width: 100vw;
     height: 200px;
     background-color: #e9e9e9;
     border: 1px solid black; }
+  body .container {
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden; }
   body nav {
-    height: auto;
     border: 1px solid black;
     display: flex;
     justify-content: center; }
@@ -35,22 +33,33 @@ body {
         padding: 1em;
         border-bottom: 1px solid grey; }
   body section {
-    height: auto;
     border: 1px solid black;
-    padding: 1em; }
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    align-items: center; }
     body section article {
-      padding: 1em; }
+      width: 80%;
+      padding: 1em;
+      border: 2px dashed green;
+      text-align: justify; }
+      body section article img {
+        width: 100%;
+        height: 50%;
+        margin-bottom: 1%; }
       body section article p {
-        height: 3ch;
+        height: 4ch;
+        font-size: 1.5em;
         overflow: hidden;
         text-overflow: ellipsis; }
+      body section article a {
+        font-size: 2em; }
     body section .noticia p {
       height: auto;
       overflow: auto;
       white-space: unset;
       text-overflow: unset; }
   body aside {
-    height: auto;
     border: 1px solid black;
     display: flex;
     flex-flow: column wrap;
@@ -58,11 +67,11 @@ body {
     max-width: 25%;
     padding: 0 4px; }
     body aside :first-child {
-      margin-top: 0; }
+      margin-top: 0.5em; }
     body aside img {
       width: 100%;
       height: auto;
-      vertical-align: middle; }
+      vertical-align: center; }
     body aside div {
       width: 100%;
       height: auto;
@@ -76,7 +85,7 @@ body {
       width: 100%;
       background-color: honeydew; }
   body footer {
-    height: 200px; }
+    height: 10em; }
     body footer form {
       border: 1px solid grey;
       border-radius: 20px;
@@ -108,36 +117,48 @@ body {
             height: 90%; }
           body .container aside div p {
             width: 30ch; } }
-
-@media screen and (max-width: 425px) {
-  .container .imgcontainer {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: column;
-    align-items: flex-end; }
-    .container .imgcontainer .hambur {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      z-index: -1; }
-    .container .imgcontainer #checkmenu {
-      width: 50px;
-      height: 50px;
-      opacity: 0; }
-    .container .imgcontainer #nave {
-      display: none; }
-      .container .imgcontainer #nave ul {
-        list-style: none;
+  @media screen and (max-width: 425px) {
+    body .container {
+      flex-flow: column; }
+      body .container .imgcontainer {
+        width: 100%;
+        height: auto;
         display: flex;
-        flex-flow: column wrap;
-        width: 100vw; }
-        .container .imgcontainer #nave ul li {
-          text-align: center;
-          padding: 1em;
-          border-bottom: 1px solid grey; }
-  .container #checkmenu:checked ~ #nave {
-    display: flex;
-    align-self: flex-end; } }
+        flex-flow: column;
+        align-items: flex-end; }
+        body .container .imgcontainer .hambur {
+          display: block;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          z-index: -1; }
+        body .container .imgcontainer #checkmenu {
+          display: block;
+          width: 50px;
+          height: 50px;
+          opacity: 0; }
+        body .container .imgcontainer #nave {
+          display: none; }
+          body .container .imgcontainer #nave ul {
+            list-style: none;
+            display: flex;
+            flex-flow: column wrap;
+            width: 100vw; }
+            body .container .imgcontainer #nave ul li {
+              text-align: center;
+              padding: 1em;
+              border-bottom: 1px solid grey; }
+        body .container .imgcontainer #checkmenu:checked ~ #nave {
+          display: flex;
+          align-self: flex-end; }
+      body .container #destacadas {
+        max-width: 100vw;
+        display: flex;
+        flex-flow: row wrap; }
+      body .container #destacadas div {
+        border: 0 solid black;
+        width: 40%;
+        margin: auto;
+        margin-top: 2%; } }
 
 /*# sourceMappingURL=style.css.map */
