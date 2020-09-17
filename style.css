@@ -59,6 +59,8 @@ body {
       overflow: auto;
       white-space: unset;
       text-overflow: unset; }
+    body section .noticia img {
+      height: 20%; }
   body aside {
     border: 1px solid black;
     display: flex;
