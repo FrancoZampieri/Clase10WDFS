@@ -165,6 +165,20 @@ body{
         }
     } 
 
+    #grid-section{
+
+        display: grid;
+        grid-template: repeat(3,350px) / repeat(3,350px);
+        
+        h2{
+            height: 4.5ch;
+            overflow: hidden;
+        }
+        p{
+            display: none;
+        }
+    }
+
 
 
 @media screen and (max-width: 900px) and (min-width:426px){

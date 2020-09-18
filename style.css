@@ -122,6 +122,14 @@ body {
       body footer .social img {
         margin: 1em;
         max-width: 50px; }
+  body #grid-section {
+    display: grid;
+    grid-template: repeat(3, 350px)/repeat(3, 350px); }
+    body #grid-section h2 {
+      height: 4.5ch;
+      overflow: hidden; }
+    body #grid-section p {
+      display: none; }
   @media screen and (max-width: 900px) and (min-width: 426px) {
     body .container {
       display: flex;
